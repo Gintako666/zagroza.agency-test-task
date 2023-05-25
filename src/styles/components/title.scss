@@ -1,0 +1,12 @@
+.title {
+  padding-bottom: 16px;
+  
+  &::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 3px;
+    background: $yellow;
+    margin: 16px auto 0; 
+  }
+}

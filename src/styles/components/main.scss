@@ -1,0 +1,109 @@
+.main {
+  background: $blue;
+  color: white;
+  margin-bottom: 100px;
+
+  @include onPhone {
+    margin-bottom: 150px;
+  }
+
+
+  &__content {
+    padding: 60px 100px 0 245px;
+    display: grid;
+    grid-template-columns: 190px 380px 1fr;
+    gap: 16px;
+
+    @include onPhone {
+      padding: 60px 20px 0;
+      grid-template-columns: 1fr 2fr;
+    }
+  }
+
+  &__title {
+    grid-column: 1/3;
+  }
+
+  &__sub-title {
+    grid-column: 1/3;
+    max-width: 450px;
+    padding-bottom: 10px;
+
+    &__link {
+      color: $yellow;
+    }
+
+    @include onPhone {
+      padding-bottom: 20px;
+    }
+  }
+
+  &__button {
+    @include onPhone {
+      margin-bottom: 0px;
+    }
+
+    &--yellow {
+      background: $yellow;
+      color: black;
+
+      grid-column: 1/2;
+    }
+
+    &--transparent {
+      background: none;
+      color: white;
+      
+      border: 2px solid white;
+
+      grid-column: 2/3;
+
+      @include onPhone {
+        grid-column: 1/2;
+      }
+    }
+  }
+
+  &__img-container {
+    grid-column: 3/4;
+    grid-row: 1/5;
+    position: relative;
+    transform: translateY(40px);
+    @include centerContent;
+    // width: max-content;
+    margin: 0 auto;
+
+    @include onPhone {
+      grid-column: 1/3;
+
+      grid-row: 5/6;
+      transform: translateY(90px);
+    }
+
+    &__businessman {
+      z-index: 1;
+
+      @include onPhone {
+        // width: 100px;
+      }
+    }
+
+    &__shape {
+      position: absolute;
+      top: 0;
+      left: -10px;
+      z-index: 1;
+    }
+
+    &__blur {
+      background: #174AFF;
+      width: 150px;
+      height: 300px;
+      filter: blur(150px);
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%);
+    }
+  }
+}

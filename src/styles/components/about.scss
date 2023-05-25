@@ -1,0 +1,42 @@
+.about {
+  color: $navyBlue;
+  text-align: center;
+  max-width: 972px;
+  margin: 0 auto;
+
+  &__subtitle {
+    max-width: 650px;
+    margin: 0 auto 100px;
+  }
+
+  .slick-slider {
+    display: block;
+    width: 100px;
+  }
+
+  .swiper-wrapper {
+   height: 500px;
+  }
+
+  .swiper-slide {
+    @include centerContent;
+  }
+
+  &__card {
+    position: relative;
+    background: #FFFFFF;
+    box-shadow: 0px 9px 27px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 123px 30px 30px;
+    height: 300px;
+    margin-bottom: 50px;
+    width: 287px;
+
+    &__img {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

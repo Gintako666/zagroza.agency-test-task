@@ -1,0 +1,7 @@
+.button {
+  width: 186px;
+  height: 46px;
+  border-radius: 8px;
+  @include centerContent;
+  font-weight: 600;
+}

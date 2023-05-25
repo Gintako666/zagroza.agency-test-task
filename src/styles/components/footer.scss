@@ -1,0 +1,102 @@
+.footer {
+  margin-top: auto;
+  background: $blue;
+  
+  &__content {
+    display: grid;
+    grid-template-columns: 90px 300px repeat(5, 120px) auto 1fr ;
+    padding: 40px 122px;
+    align-items: center;
+    row-gap: 75px;
+
+    @include onPhone {
+      padding: 50px 35px;
+      align-items: start;
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &__logo {
+    grid-column: 1/2;
+  }
+
+  &__nav {
+    grid-column: 3/8;
+    
+    display: flex;
+    gap: 100px;
+    font-size: 14px;
+
+    &__link {
+      color: white;
+    }
+
+    @include onPhone {
+      grid-column: 1/4;
+      gap: 16px;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__multilinks {
+    max-width: max-content;
+    display: flex;
+    gap: 25px;
+    margin-left: auto;
+    grid-column: 9/10;
+
+    @include onPhone {
+      grid-column: 4/5;
+    }
+  }
+  &__input-group {
+    display: flex;
+    color: white;
+    grid-column: 1/5;
+    align-items: center;
+
+    @include onPhone {
+      flex-direction: column;
+      align-items: start;
+      gap: 16px;
+    }
+
+    &__label {
+      padding-right: 26px; 
+    }
+
+    &__input {
+      padding: 12px 16px;
+      color: white;
+      border: 1px solid white;
+      background: none;
+      border-radius: 6px 0px 0px 6px;
+      height: 45px;
+      outline: none;
+     
+      width: 243px;
+
+      &::placeholder {
+        color: white
+      }
+
+      @include onPhone {
+        width: 200px;
+      }
+    }
+
+    &__button {
+      background: white;
+      border-radius: 0px 6px 6px 0px;
+      height: 45px;
+      width: 122px;
+
+      @include onPhone {
+        width: 100px;
+      }
+    }
+  }
+
+
+}
