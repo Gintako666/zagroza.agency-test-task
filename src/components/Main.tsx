@@ -41,7 +41,7 @@ export const Main = () => {
               className="main__img-container__businessman"
             />
             <img
-              src="/img/shape.png"
+              src="./img/shape.png"
               alt=""
               className="main__img-container__shape"
             />
